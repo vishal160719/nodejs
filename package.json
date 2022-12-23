@@ -4,17 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": " set NODE_ENV=test && mocha --timeout 4000 --exit",
     "start": "nodemon app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
+    "mocha": "^10.2.0",
     "mongoose": "^6.8.1",
-    "nodemon": "^2.0.20"
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "sinon": "^15.0.1",
+    "supertest": "^6.3.3"
   },
   "devDependencies": {
     "eslint": "^8.30.0",

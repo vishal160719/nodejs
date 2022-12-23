@@ -4,7 +4,9 @@ const logger = require('./middlewares/logger')
 const authRouter = require('./routes/authentication')
 const connectDB = require('./config/db')
 const profileRouter = require('./routes/profile')
-dotenv.config()
+dotenv.config({
+  path: '.env.test'
+})
 const app = express()
 connectDB()
 app.use(express.urlencoded({extended: true}))
@@ -26,3 +28,5 @@ app.listen(process.env.PORT, (error) => {
   }
   console.log('server is running on port' + process.env.PORT)
 })
+
+module.exports = app

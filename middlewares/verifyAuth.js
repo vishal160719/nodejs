@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 module.exports = (req, res, next) => {
   try {
-    const accessToken = req.header.authorization
+    const accessToken = req.headers.authorization
 
     if (!accessToken) {
       throw Error('access token not found')
